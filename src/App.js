@@ -68,14 +68,14 @@ function App() {
                       <div className="form-group">
                           <b>Fornavn</b>
                           <br/>
-                          <input id="firstname" type="text" name="firstname" size="20"
+                          <input id="firstname" type="text" name="firstname" size="sm"
                                      onChange={event => firstNameSetState(event.target.value)}
                               />
                       </div>
                       <div className="form-group">
                           <b>Etternavn</b>
                           <br/>
-                          <input id="lastname" type="text" name="lastname" size="20"
+                          <input id="lastname" type="text" name="lastname" size="sm"
                                  onChange={(event => lastNameSetState(event.target.value))}
                           />
                       </div>
@@ -90,7 +90,7 @@ function App() {
                       <div className="form-group">
                           <b>Passord</b>
                           <br/>
-                          <input id="password" type="text" name="password" size="20"
+                          <input id="password" type="text" name="password" size="sm"
                                  required="*"
                                  onChange={(event => passwordSetState(event.target.value))}
                           />
@@ -98,7 +98,7 @@ function App() {
                       <div className="form-group">
                           <b>Gjenta passord</b>
                           <br/>
-                          <input id="repeatPassword" type="text" name="repeatPassword" size="20"
+                          <input id="repeatPassword" type="text" name="repeatPassword" size="sm"
                                  required="*"
                                  onChange={(event => rePasswordSetState(event.target.value))}
                           />
