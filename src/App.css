@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #6ddbe9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+.row{
+  margin-top: 5%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 8%;
+  width: 75%;
+}
+.header1, .header2 {
+  font-weight: bold;
+}
+.header1{
+  color: #228fd9;
+}
+.infoCol, .regCol{
+  padding: 3%;
+  width: 100%;
+}
+.infoCol{
+  background-color: #228fd9;
+  border-radius: 10px 0 0 10px;
+}
+.regCol{
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+}
+.infoText{
+  font-size: 12pt;
+  text-align: left;
+}
+.registeredBtn, .submitBtn{
+  text-align: center;
+  margin-top: 5%;
+  padding: 3%;
+  border: none;
+  font-weight: bold;
+  font-size: 13pt;
+  border-radius: 5px 0 5px 0;
+}
+.registeredBtn{
+  background-color: white;
+  width: 40%;
+}
+.submitBtn{
+  background-color: #228fd9;
+  color: white;
+  width: 30%;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 12pt;
+  color: grey;
+}
+.form-group {
+  padding: 2%;
+}
+.consent {
+  color: grey;
+  font-size: 12pt;
+  font-weight: bold;
 }
