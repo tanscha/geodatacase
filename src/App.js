@@ -4,6 +4,8 @@ import axios from "axios";
 import React, {useState} from "react";
 
 function App() {
+    // setter initial state
+    // den første er nåværende state og den andre er metoden som gjør at vi kan oppdatere den
     const [firstName, firstNameSetState] = useState("");
     const [lastName, lastNameSetState] = useState("");
     const [mail, mailSetState] = useState("");
@@ -12,6 +14,7 @@ function App() {
     const [simPassword, setSimilar] = useState(true);
 
 
+    // sjekker om passordene er like
     const passwordCheck = (event) => {
         if (!(password === repeatPassword)){
             setSimilar(false);
@@ -20,13 +23,21 @@ function App() {
         }
     }
 
+    //kall ved submit av form
     const register = (event) => {
         passwordCheck(event);
-        postRegister().then(r => {
-        }).catch(error => {
-            console.log(error);
-        })
+        if(setSimilar(false)){
+            console.log("Passordene må være like");
+        }
+        else {
+            postRegister().then(r => {
+            }).catch(error => {
+                console.log(error);
+            })
+        }
     };
+
+    //post med data til register
     async function postRegister(){
         await axios({
             method: 'post',
